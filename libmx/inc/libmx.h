@@ -31,7 +31,8 @@ char *mx_strncat(char *restrict s1, const char *restrict s2, int n);
 int mx_abs(int n);
 void mx_printlist(t_list *head);
 bool mx_char_in_str(char *s, char c);
-// bool mx_isdigit(char c);
+int mx_atoi(const char *str);
+bool mx_isdigit(int c);
 
 // Utils
 void mx_printchar(char c);
