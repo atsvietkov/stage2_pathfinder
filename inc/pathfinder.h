@@ -16,6 +16,8 @@ void mx_file_exist(char *filename);
 void mx_file_noempty(char *filename);
 void mx_valid_line1(int isl_num);
 int mx_read_islands_num(char *file);
+void **mx_create_bridges_array(char *file, int **bridges, int islands_num);
+void mx_valid_string(char *buffer, char *file);
 
 // bool mx_validation(int argc, char **argv);
 // bool mx_argc_valid(argc);

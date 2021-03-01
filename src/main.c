@@ -8,9 +8,17 @@ int main(int argc, char **argv) {
     mx_validation(argc, argv[1]);   // correct argc, file exists, file no empty
 
     char *file = mx_file_to_str(argv[1]);
+    int islands_num = mx_read_islands_num(file);    // line 1 valid (only digits, > 0), remove line 1
 
-    int islands_num = mx_read_islands_num(file);    // line 1 valid (only digits, > 0)
-    mx_printstrn(file);
+    int bridges[islands_num][islands_num];
+
+    mx_create_bridges_array(file, **bridges, islands_num);
+    
+
+
+
+
+    // mx_printstrn(file);
 
     
 
