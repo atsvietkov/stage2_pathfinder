@@ -6,7 +6,7 @@ void mx_file_exist(char *filename) {
         mx_print_err("error: file ");
         mx_print_err(filename);
         mx_print_err(" does not exist\n");
-        exit(0);
+        exit(1);
     }
     close(fd);
 }

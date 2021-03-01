@@ -6,6 +6,6 @@ void mx_file_noempty(char *filename) {
         mx_print_err("error: file ");
         mx_print_err(filename);
         mx_print_err(" is empty\n");
-        exit(0);
+        exit(1);
     } 
 }

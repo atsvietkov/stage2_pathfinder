@@ -1,10 +1,8 @@
 #include "../inc/pathfinder.h"
 
-void mx_valid_argc(int argc, char *filename) {
+void mx_valid_argc(int argc) {
     if (argc != 2) {
-        mx_print_err("usage: ");
-        mx_print_err(filename);
-        mx_print_err(" [filename]\n");
-        exit(0);
+        mx_print_err("usage: ./pathfinder [filename]\n");
+        exit(1);
     }
 }
