@@ -2,7 +2,7 @@
 
 void mx_valid_line1(int isl_num) {
     if (isl_num < 1) {
-        mx_print_err("error: line 1 is not valid");
+        mx_print_err("error: line 1 is not valid\n");
         exit(0);
     }
 }
