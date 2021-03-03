@@ -8,11 +8,23 @@ int main(int argc, char **argv) {
     mx_validation(argc, argv[1]);   // correct argc, file exists, file no empty
 
     char *file = mx_file_to_str(argv[1]);
-    int islands_num = mx_read_islands_num(file);    // line 1 valid (only digits, > 0), remove line 1
+    int islands_num_line = mx_read_islands_num(file);    // line 1 valid (only digits, > 0), remove line 1
 
-    int bridges[islands_num][islands_num];
+    // int bridges[islands_num][islands_num];
 
-    mx_create_bridges_array(file, **bridges, islands_num);
+    t_islands *islands_list = NULL;
+    int islands_num_list = mx_create_islands_list(islands_list, file);
+    if (islands_num_list != islands_num_line) {
+        mx_print_err("error: invalid number of islands\n");
+        mx_del_islands_list(islands_list);
+        mx_strdel(&file);
+        exit(1);
+    }
+
+
+
+
+    // mx_create_bridges_array(file, **bridges, islands_num);
     
 
 
