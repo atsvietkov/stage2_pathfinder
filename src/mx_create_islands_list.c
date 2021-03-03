@@ -39,9 +39,9 @@ int mx_create_islands_list(t_islands *islands_list, char *file) {
             mx_strdel(&buffer2);
             exit(1);
         }
-        mx_add_island(buffer1);
-        mx_add_island(buffer2);
-        
+        mx_add_island(buffer1, islands_list);
+        mx_add_island(buffer2, islands_list);
+
         mx_strdel(&line);
         mx_strdel(&buffer1);
         mx_strdel(&buffer2);
