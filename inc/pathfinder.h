@@ -15,7 +15,12 @@ void mx_print_err(const char *s);
 void mx_valid_argc(int argc);
 void mx_file_exist(char *filename);
 void mx_file_noempty(char *filename);
-void mx_valid_line1(int isl_num);
+
+char *mx_parse_str_to_ch(char *str, char delim);
+void mx_valid_line1(int isl_num, char *file);
+
+
+// void mx_valid_line1(int isl_num);
 int mx_read_islands_num(char *file);
 void **mx_create_bridges_array(char *file, int **bridges, int islands_num);
 void mx_valid_string(char *buffer, char *file, int counter);
